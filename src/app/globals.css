@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 50% 99%;
+    --foreground: 257 20% 15%;
+    --card: 270 50% 99%;
+    --card-foreground: 257 20% 15%;
+    --popover: 270 50% 99%;
+    --popover-foreground: 257 20% 15%;
+    --primary: 336 84% 54%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 270 70% 65%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 257 20% 85%;
+    --input: 257 20% 85%;
+    --ring: 336 84% 54%;
+    --radius: 0.8rem;
+  }
+  .dark {
+    --background: 270 10% 10%;
+    --foreground: 0 0% 98%;
+    --card: 270 10% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 270 10% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 336 84% 64%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 16%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 270 70% 75%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 16%;
+    --input: 240 5% 16%;
+    --ring: 336 84% 64%;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    /* color: black; */
+    min-height: 100vh;
+  }
+  .main-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    overflow: hidden;
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(
+        at 88% 3%,
+        hsla(270, 70%, 65%, 0.15) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 15% 92%,
+        hsla(336, 84%, 54%, 0.15) 0px,
+        transparent 50%
+      );
+  }
+
+  .geometric-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -9;
+    overflow: hidden;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80' fill='none' stroke='hsl(270 50% 90% / 0.5)'%3e%3cpath d='M0 0L40 40L0 80'/%3e%3cpath d='M80 0L40 40L80 80'/%3e%3cpath d='M40 40L0 40'/%3e%3cpath d='M40 40L80 40'/%3e%3cpath d='M40 40L40 0'/%3e%3cpath d='M40 40L40 80'/%3e%3c/svg%3e");
+  }
+
+  .leadership-gradient {
+    background: #fa0ab6;
+    background: linear-gradient(
+      90deg,
+      rgba(250, 10, 182, 1) 0%,
+      rgba(168, 74, 186, 1) 81%,
+      rgba(113, 121, 217, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
